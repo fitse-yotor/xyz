@@ -1,0 +1,162 @@
+2025-06-10 12:46:01,568 - __main__ - INFO - Database setup completed successfully
+2025-06-10 12:46:01,628 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-06-10 12:46:11,650 - telethon.network.mtprotosender - WARNING - Attempt 1 at connecting failed: TimeoutError: 
+2025-06-10 12:46:14,085 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-06-10 12:47:02,364 - telethon.client.users - INFO - Phone migrated to 4
+2025-06-10 12:47:02,467 - telethon.client.telegrambaseclient - INFO - Reconnecting to new data center 4
+2025-06-10 12:47:02,582 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2025-06-10 12:47:02,583 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-06-10 12:47:02,584 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-10 12:47:04,066 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-10 12:47:17,005 - __main__ - INFO - Telegram client initialized successfully
+2025-06-10 12:48:16,544 - __main__ - INFO - Successfully scraped 71 messages from Pavel Durov
+2025-06-10 12:49:51,598 - __main__ - INFO - Successfully scraped 36 messages from Wubsira Handcraft_ \u12cd\u1265\u1235\u122b \u12d5\u12f0-\u1325\u1260\u1265
+2025-06-10 12:52:41,820 - __main__ - INFO - Database setup completed successfully
+2025-06-10 12:52:41,822 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-10 12:52:41,920 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-10 12:52:42,607 - __main__ - INFO - Telegram client initialized successfully
+2025-06-10 12:54:25,698 - __main__ - INFO - Successfully scraped 38 messages from TIKVAH-ETHIOPIA
+2025-06-10 13:03:59,041 - __main__ - INFO - Database setup completed successfully
+2025-06-10 13:03:59,044 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-10 13:03:59,143 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-10 13:03:59,826 - __main__ - INFO - Telegram client initialized successfully
+2025-06-10 13:04:59,911 - telethon.client.updates - INFO - Got difference for channel 1243111354 updates
+2025-06-10 13:05:24,959 - __main__ - ERROR - Error scraping source \u1235\u12ab\u12ed Sport ET™: table messages has no column named message_id
+2025-06-10 13:06:19,833 - __main__ - ERROR - Error scraping source \u1235\u12ab\u12ed Sport ET™: table messages has no column named message_id
+2025-06-10 13:06:35,116 - __main__ - INFO - Database setup completed successfully
+2025-06-10 13:06:35,120 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-10 13:06:35,220 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-10 13:06:36,001 - __main__ - INFO - Telegram client initialized successfully
+2025-06-10 13:07:01,219 - __main__ - INFO - Successfully scraped 97 messages from \u1235\u12ab\u12ed Sport ET™
+2025-06-10 13:08:26,873 - __main__ - INFO - Database setup completed successfully
+2025-06-10 13:08:26,875 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-10 13:08:26,971 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-10 13:08:27,718 - __main__ - INFO - Telegram client initialized successfully
+2025-06-10 13:28:07,554 - __main__ - INFO - Database setup completed successfully
+2025-06-10 13:28:07,557 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-10 13:28:07,663 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-10 13:28:08,376 - __main__ - INFO - Telegram client initialized successfully
+2025-06-10 13:31:49,367 - __main__ - INFO - Database setup completed successfully
+2025-06-10 13:31:49,371 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-10 13:31:49,469 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-10 13:31:50,134 - __main__ - INFO - Telegram client initialized successfully
+2025-06-10 13:32:32,971 - __main__ - ERROR - Error scraping source None: NOT NULL constraint failed: messages.source_name
+2025-06-10 13:32:35,072 - __main__ - INFO - Real-time message scraping started
+2025-06-10 13:33:38,363 - __main__ - INFO - New message received from FTYOTORAWI: hello...
+2025-06-10 13:33:43,968 - __main__ - INFO - New message received from FTYOTORAWI: uuuuuuuuuuuu...
+2025-06-10 13:33:56,816 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.92:443/TcpFull...
+2025-06-10 13:33:56,817 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.92:443/TcpFull complete!
+2025-06-10 13:35:32,305 - __main__ - INFO - Database setup completed successfully
+2025-06-10 13:35:32,316 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-10 13:35:32,420 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-10 13:35:33,446 - __main__ - INFO - Telegram client initialized successfully
+2025-06-10 13:35:38,311 - __main__ - INFO - Real-time message scraping started
+2025-06-10 13:35:39,717 - __main__ - INFO - New message received from CodeNight: sheesh , you're still here ?...
+2025-06-10 13:36:00,433 - __main__ - INFO - New message received from FTYOTORAWI: hello...
+2025-06-10 13:36:25,293 - __main__ - INFO - New message received from FTYOTORAWI: test message Realtime scraping...
+2025-06-10 13:36:33,789 - __main__ - INFO - New message received from CodeNight: Why you care that...
+2025-06-10 13:37:14,581 - __main__ - INFO - New message received from FTYOTORAWI: \u1245\u12f1\u1235 \u130e\u122d\u130e\u122d\u12ee\u1235 \u12d8\u1291\u1232\u1235\u1363 \u12e8\u1218\u1295\u1348\u1235 \u1245\u12f1\u1235\u1295 \u1218\u1208\u12ae\u1275\u1290\u1275 \u1208\u121b\u1228\u130b\u1308\u1325 \u12e8\u134d\u120d\u1235\u134d\u1293\u1295 ...
+2025-06-10 13:38:33,729 - __main__ - INFO - New message received from 2302726710: \u12cd\u12f5 \u12f0\u1295\u1260\u129b\u127d\u1295 \u12ed\u1205\u1295  \u12e8\u1218\u1228\u1303 \u12a0\u12cd\u12f5 \u1270\u1320\u1245\u1218\u12cd \u1325\u12eb\u1244\u12ce\u1275\u1295 \u1235\u120b\u1240\u1228\u1261 \u12a8\u120d\u1265 \u12a5\u1293\u1218...
+2025-06-10 13:38:34,165 - telethon.client.updates - INFO - Got difference for channel 1204209308 updates
+2025-06-10 13:38:34,242 - __main__ - INFO - New message received from CodeNight: ...
+2025-06-10 13:40:34,014 - __main__ - INFO - New message received from CodeNight:  30-Day Design Challenge – Get Hired! 
+
+Are you a ...
+2025-06-10 13:48:25,740 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.92:443/TcpFull...
+2025-06-10 13:48:25,741 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.92:443/TcpFull complete!
+2025-06-10 13:48:35,161 - __main__ - INFO - Database setup completed successfully
+2025-06-10 13:48:35,166 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-10 13:48:35,271 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-10 13:48:36,138 - __main__ - INFO - Telegram client initialized successfully
+2025-06-10 13:48:56,231 - __main__ - INFO - Successfully scraped 97 messages from \u1235\u12ab\u12ed Sport ET™
+2025-06-10 13:48:56,885 - __main__ - INFO - Successfully scraped 93 messages from Codenight
+2025-06-10 13:48:57,566 - __main__ - INFO - Successfully scraped 100 messages from NEW MARKET \U0001f947
+2025-06-10 13:48:58,058 - __main__ - INFO - Successfully scraped 22 messages from FTYOTORAWI
+2025-06-10 13:48:59,012 - __main__ - INFO - Successfully scraped 38 messages from TIKVAH-ETHIOPIA
+2025-06-10 13:49:00,100 - __main__ - INFO - Successfully scraped 100 messages from Maroset Community
+2025-06-10 13:49:01,129 - __main__ - INFO - Successfully scraped 95 messages from Maroset
+2025-06-10 13:49:01,288 - __main__ - ERROR - Error scraping source None: NOT NULL constraint failed: messages.source_name
+2025-06-10 13:49:01,785 - __main__ - INFO - Successfully scraped 3 messages from \u1218\u122d\u130c\u1273 \u1218\u1295\u130d\u1235\u1271 \u12e8\u1263\u1205\u120d \u1205\u12ad\u121d\u1293 09 27 76 94 82
+2025-06-10 13:49:03,329 - __main__ - INFO - Successfully scraped 99 messages from Venue
+2025-06-10 13:49:03,946 - __main__ - INFO - Successfully scraped 23 messages from zz market
+2025-06-10 13:49:04,481 - __main__ - INFO - Successfully scraped 55 messages from \u121b\u1272 \u12e8\u12a5\u1295\u1328\u1275 \u1225\u122b\u12ce\u127d \u12f5\u122d\u1305\u1275
+2025-06-10 13:49:05,466 - __main__ - INFO - Successfully scraped 71 messages from \u1218\u122d\u130c\u1273 \u1218\u1295\u130d\u1235\u1271
+2025-06-10 13:49:05,991 - __main__ - INFO - Successfully scraped 23 messages from Nine Computers
+2025-06-10 13:54:59,917 - __main__ - INFO - Database setup completed successfully
+2025-06-10 13:54:59,924 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-10 13:55:00,033 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-10 13:55:00,768 - __main__ - INFO - Telegram client initialized successfully
+2025-06-10 13:57:27,390 - __main__ - INFO - Database setup completed successfully
+2025-06-10 13:57:27,395 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-10 13:57:27,493 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-10 13:57:28,388 - __main__ - INFO - Telegram client initialized successfully
+2025-06-10 13:57:50,586 - __main__ - ERROR - Error searching messages: tuple indices must be integers or slices, not str
+2025-06-10 13:58:43,906 - __main__ - ERROR - Error searching messages: tuple indices must be integers or slices, not str
+2025-06-10 13:59:39,230 - __main__ - INFO - Database setup completed successfully
+2025-06-10 13:59:39,232 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-10 13:59:39,334 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-10 13:59:40,081 - __main__ - INFO - Telegram client initialized successfully
+2025-06-10 15:41:34,536 - __main__ - INFO - Database setup completed successfully
+2025-06-10 15:41:34,548 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-10 15:41:34,682 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-10 15:41:35,415 - __main__ - INFO - Telegram client initialized successfully
+2025-06-10 15:42:05,164 - __main__ - INFO - Successfully scraped 38 messages from TIKVAH-ETHIOPIA
+2025-06-10 15:57:51,369 - __main__ - INFO - Database setup completed successfully
+2025-06-10 15:57:51,374 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-10 15:57:51,475 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-10 15:57:52,321 - __main__ - INFO - Telegram client initialized successfully
+2025-06-10 15:58:02,317 - __main__ - INFO - Successfully scraped 27 messages from online shoping
+2025-06-10 15:58:22,359 - __main__ - INFO - Successfully scraped 97 messages from \u1235\u12ab\u12ed Sport ET™
+2025-06-10 16:47:03,968 - __main__ - INFO - Database setup completed successfully
+2025-06-10 16:47:03,970 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-10 16:47:04,068 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-10 16:47:04,825 - __main__ - INFO - Telegram client initialized successfully
+2025-06-10 16:47:15,930 - __main__ - INFO - Database setup completed successfully
+2025-06-10 16:47:15,935 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-10 16:47:16,033 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-10 16:52:02,515 - __main__ - INFO - Database setup completed successfully
+2025-06-10 16:52:02,517 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-10 16:52:02,614 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-10 16:53:42,743 - __main__ - INFO - Database setup completed successfully
+2025-06-10 16:53:42,748 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-10 16:53:42,849 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-10 16:53:56,323 - __main__ - INFO - Database setup completed successfully
+2025-06-10 16:53:56,328 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-10 16:53:56,426 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-10 16:54:10,909 - __main__ - INFO - Database setup completed successfully
+2025-06-10 16:54:10,914 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-10 16:54:11,013 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-10 16:56:51,351 - __main__ - INFO - Database setup completed successfully
+2025-06-10 16:56:51,485 - __main__ - ERROR - Failed to initialize client: invalid literal for int() with base 10: 'your_api_id'
+2025-06-10 16:56:51,485 - __main__ - ERROR - Error in main: invalid literal for int() with base 10: 'your_api_id'
+2025-06-10 16:56:51,487 - __main__ - INFO - Script execution completed
+2025-06-11 09:29:36,642 - __main__ - INFO - Database setup completed successfully
+2025-06-11 09:29:36,645 - __main__ - INFO - Removed existing session file
+2025-06-11 09:29:36,691 - __main__ - ERROR - Failed to initialize client: invalid literal for int() with base 10: 'your_api_id'
+2025-06-11 09:29:36,692 - __main__ - ERROR - Error in main: invalid literal for int() with base 10: 'your_api_id'
+2025-06-11 09:29:36,695 - __main__ - INFO - Script execution completed
+2025-06-11 10:35:47,913 - __main__ - INFO - Database setup completed successfully
+2025-06-11 10:35:48,278 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-11 10:35:48,381 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-11 10:35:48,956 - __main__ - INFO - Telegram client initialized successfully
+2025-06-11 14:31:54,432 - __main__ - INFO - Database setup completed successfully
+2025-06-11 14:31:54,517 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-11 14:31:54,623 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-11 14:31:55,199 - __main__ - INFO - Telegram client initialized successfully
+2025-06-11 14:33:03,112 - telethon.client.users - INFO - Sleeping for 3s (0:00:03) on GetHistoryRequest flood wait
+2025-06-11 14:33:23,429 - telethon.client.users - INFO - Sleeping for 13s (0:00:13) on GetHistoryRequest flood wait
+2025-06-11 14:33:55,973 - telethon.client.users - INFO - Sleeping for 12s (0:00:12) on GetHistoryRequest flood wait
+2025-06-12 12:24:43,018 - __main__ - INFO - Database setup completed successfully
+2025-06-12 12:24:43,023 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-12 12:24:43,126 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-12 12:24:43,902 - __main__ - INFO - Telegram client initialized successfully
+2025-06-12 12:26:20,936 - telethon.client.users - INFO - Sleeping for 6s (0:00:06) on GetHistoryRequest flood wait
+2025-06-12 12:26:44,753 - telethon.client.users - INFO - Sleeping for 13s (0:00:13) on GetHistoryRequest flood wait
+2025-06-12 12:27:12,813 - telethon.client.users - INFO - Sleeping for 16s (0:00:16) on GetHistoryRequest flood wait
+2025-06-12 13:05:23,280 - __main__ - INFO - Created data directory at: c:\Users\muluh\OneDrive\Desktop\newP\Project\data
+2025-06-12 13:05:23,328 - __main__ - INFO - Database setup completed successfully
+2025-06-12 13:05:23,332 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-12 13:05:23,442 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-12 13:05:24,202 - __main__ - INFO - Telegram client initialized successfully
+2025-06-12 13:08:56,586 - telethon.client.users - INFO - Sleeping for 3s (0:00:03) on GetHistoryRequest flood wait
+2025-06-12 13:09:19,068 - telethon.client.users - INFO - Sleeping for 12s (0:00:12) on GetHistoryRequest flood wait
