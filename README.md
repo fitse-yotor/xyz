@@ -64,6 +64,12 @@ python -m http.server
 
 Then, open your web browser and navigate to `http://localhost:8000` to view the README interactively.
 
+## Workflow Animation
+
+![Workflow Animation](https://via.placeholder.com/800x400?text=Workflow+Animation)
+
+*This animation illustrates the workflow of the project, from data preprocessing to embedding generation and FAISS indexing.*
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details. 
