@@ -8,6 +8,41 @@ This project is designed to preprocess Telegram chat data, generate word embeddi
 
 The project uses the `Davlan/afro-xlmr-large` model from the Hugging Face Transformers library for generating word embeddings. This model is specifically designed for African languages, including Amharic, and provides high-quality embeddings for text data.
 
+## Word Embeddings and Storage
+
+### XLM-R Word Embeddings
+XLM-R (Cross-lingual Language Model - RoBERTa) is a powerful multilingual model that can generate high-quality word embeddings for multiple languages. In this project, we use the AfroXLMR variant which is specifically fine-tuned for African languages. The embeddings are generated as dense vectors of fixed dimensions (typically 1024 for the large model), where each vector represents the semantic meaning of a word or text chunk.
+
+### Storage Methods
+The project supports two main methods for storing word embeddings:
+
+1. **Vector Storage (FAISS Index)**
+   - Embeddings are stored as dense vectors in a FAISS index
+   - Enables efficient similarity search and nearest neighbor queries
+   - Optimized for high-dimensional vector operations
+   - Supports both CPU and GPU operations
+   - Provides fast retrieval of similar text chunks
+
+2. **Graph Storage (Optional)**
+   - Embeddings can be represented as nodes in a graph
+   - Edges represent semantic relationships between words/text chunks
+   - Useful for visualizing semantic relationships
+   - Enables graph-based analysis of text data
+   - Can be implemented using libraries like NetworkX or PyG
+
+### Benefits of Each Storage Method
+- **Vector Storage (FAISS)**
+  - Fast similarity search
+  - Memory efficient
+  - Scalable to large datasets
+  - Easy to update and maintain
+
+- **Graph Storage**
+  - Visual representation of relationships
+  - Enables complex graph-based analysis
+  - Useful for community detection
+  - Better for understanding semantic networks
+
 ## Project Structure
 
 - **data_preprocessor.py**: Contains the `DataPreprocessor` class for cleaning and preprocessing text data.

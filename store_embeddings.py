@@ -7,6 +7,9 @@ from sklearn.manifold import TSNE
 import networkx as nx
 from sklearn.metrics.pairwise import cosine_similarity
 import logging
+import faiss
+import pickle
+from tqdm import tqdm
 
 # Configure logging
 logging.basicConfig(
@@ -22,7 +25,7 @@ class EmbeddingStorage:
         
         Args:
             embeddings_path (str): Path to the embeddings file (.npy)
-            metadata_path (str): Path to the metadata file (.pkl)
+            metadata_path (str): Path to the metadata file (.csv or .pkl)
             output_dir (str): Directory to store all embedding-related files
         """
         self.embeddings_path = embeddings_path
@@ -32,16 +35,155 @@ class EmbeddingStorage:
         # Create output directory if it doesn't exist
         os.makedirs(output_dir, exist_ok=True)
         
-        # Load embeddings and metadata
-        self.embeddings = np.load(embeddings_path)
-        self.metadata = pd.read_pickle(metadata_path)
+        # Load metadata first
+        logger.info(f"Loading metadata from {metadata_path}")
+        if metadata_path.endswith('.csv'):
+            self.metadata = pd.read_csv(metadata_path)
+        else:
+            self.metadata = pd.read_pickle(metadata_path)
+        logger.info(f"Loaded metadata with {len(self.metadata)} entries")
+        
+        # Load or create embeddings
+        if os.path.exists(embeddings_path):
+            logger.info(f"Loading existing embeddings from {embeddings_path}")
+            self.embeddings = np.load(embeddings_path)
+            logger.info(f"Loaded embeddings of shape: {self.embeddings.shape}")
+        else:
+            logger.info("Embeddings file not found. Creating new embeddings...")
+            self.create_embeddings()
         
         # Reshape embeddings from (n, 1, 768) to (n, 768)
         if len(self.embeddings.shape) == 3:
             self.embeddings = self.embeddings.squeeze(axis=1)
+            logger.info(f"Reshaped embeddings to: {self.embeddings.shape}")
+    
+    def create_embeddings(self):
+        """Create embeddings from the metadata file using XLM-R."""
+        try:
+            from transformers import AutoTokenizer, AutoModel
+            import torch
+            
+            # Initialize XLM-R model
+            logger.info("Initializing XLM-R model...")
+            model_name = "xlm-roberta-base"
+            tokenizer = AutoTokenizer.from_pretrained(model_name)
+            model = AutoModel.from_pretrained(model_name)
+            
+            # Get text column
+            text_column = 'processed_text' if 'processed_text' in self.metadata.columns else 'text'
+            texts = self.metadata[text_column].tolist()
+            
+            # Create embeddings
+            embeddings = []
+            batch_size = 32
+            
+            logger.info(f"Creating embeddings for {len(texts)} texts...")
+            for i in tqdm(range(0, len(texts), batch_size), desc="Generating embeddings"):
+                batch_texts = texts[i:i+batch_size]
+                
+                # Tokenize
+                inputs = tokenizer(
+                    batch_texts,
+                    padding=True,
+                    truncation=True,
+                    max_length=512,
+                    return_tensors="pt"
+                )
+                
+                # Get embeddings
+                with torch.no_grad():
+                    outputs = model(**inputs)
+                
+                # Mean pooling
+                token_embeddings = outputs.last_hidden_state
+                attention_mask = inputs['attention_mask']
+                token_embeddings = token_embeddings * attention_mask.unsqueeze(-1)
+                sum_embeddings = torch.sum(token_embeddings, dim=1)
+                sum_mask = torch.sum(attention_mask, dim=1, keepdim=True)
+                mean_embeddings = sum_embeddings / sum_mask
+                
+                embeddings.append(mean_embeddings.numpy())
+            
+            # Combine all embeddings
+            self.embeddings = np.vstack(embeddings)
+            
+            # Save embeddings
+            os.makedirs(os.path.dirname(self.embeddings_path), exist_ok=True)
+            np.save(self.embeddings_path, self.embeddings)
+            
+            logger.info(f"Created and saved embeddings of shape: {self.embeddings.shape}")
+            
+        except Exception as e:
+            logger.error(f"Error creating embeddings: {str(e)}")
+            raise
+    
+    def create_faiss_index(self, index_type="flat", nlist=100):
+        """
+        Create a FAISS index from embeddings.
         
-        logger.info(f"Loaded embeddings of shape: {self.embeddings.shape}")
-        logger.info(f"Loaded metadata with {len(self.metadata)} entries")
+        Args:
+            index_type (str): Type of FAISS index to create ('flat' or 'ivf')
+            nlist (int): Number of clusters for IVF index
+        
+        Returns:
+            faiss.Index: Created FAISS index
+        """
+        try:
+            # Normalize embeddings for cosine similarity
+            faiss.normalize_L2(self.embeddings)
+            
+            # Convert embeddings to float32
+            embeddings_float32 = self.embeddings.astype('float32')
+            
+            if index_type == "flat":
+                # Create a simple flat index
+                index = faiss.IndexFlatIP(self.embeddings.shape[1])
+            elif index_type == "ivf":
+                # Create an IVF index for faster search
+                quantizer = faiss.IndexFlatIP(self.embeddings.shape[1])
+                index = faiss.IndexIVFFlat(quantizer, self.embeddings.shape[1], nlist)
+                # Train the index
+                index.train(embeddings_float32)
+            else:
+                raise ValueError(f"Unsupported index type: {index_type}")
+            
+            # Add vectors to the index
+            index.add(embeddings_float32)
+            
+            logger.info(f"Created FAISS index of type {index_type} with {index.ntotal} vectors")
+            return index
+            
+        except Exception as e:
+            logger.error(f"Error creating FAISS index: {str(e)}")
+            raise
+    
+    def save_faiss_index(self, index, output_path=None):
+        """
+        Save FAISS index and associated metadata.
+        
+        Args:
+            index: FAISS index to save
+            output_path: Path to save the index (optional)
+        """
+        try:
+            if output_path is None:
+                output_path = os.path.join(self.output_dir, 'faiss_index.pkl')
+            
+            # Prepare data to save
+            index_data = {
+                'index': index,
+                'text_chunks': self.metadata['processed_text'].tolist() if 'processed_text' in self.metadata.columns else self.metadata['text'].tolist()
+            }
+            
+            # Save index and metadata
+            with open(output_path, 'wb') as f:
+                pickle.dump(index_data, f, protocol=4)
+            
+            logger.info(f"Saved FAISS index to {output_path}")
+            
+        except Exception as e:
+            logger.error(f"Error saving FAISS index: {str(e)}")
+            raise
     
     def save_vector_embeddings(self):
         """Save embeddings in various vector formats."""
@@ -153,15 +295,27 @@ class EmbeddingStorage:
             logger.error(f"Error creating heatmap: {str(e)}")
 
 def main():
-    # Initialize storage
+    # Create necessary directories
+    os.makedirs('data/embeddings', exist_ok=True)
+    os.makedirs('Embeddings', exist_ok=True)
+    
+    # Define paths
+    embeddings_dir = 'data/embeddings'
+    processed_file = 'data/preprocessed/all_messages_20250612_130550_processed.csv'
+    
+    # Initialize storage with correct paths
     storage = EmbeddingStorage(
-        embeddings_path='data/embeddings/xlmr_embeddings.npy',
-        metadata_path='data/embeddings/xlmr_embeddings_metadata.pkl',
-        output_dir='data/embeddings/visualizations'
+        embeddings_path=os.path.join(embeddings_dir, 'xlmr_embeddings.npy'),
+        metadata_path=processed_file,
+        output_dir='Embeddings'
     )
     
     # Save vector embeddings
     storage.save_vector_embeddings()
+    
+    # Create and save FAISS index
+    index = storage.create_faiss_index(index_type="flat")  # or "ivf" for faster search
+    storage.save_faiss_index(index)
     
     # Create visualizations
     storage.create_visualization()

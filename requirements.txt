@@ -7,9 +7,15 @@ numpy>=1.21.0
 emoji>=2.2.0
 python-dateutil>=2.8.2
 nltk>=3.8.1
-scikit-learn>=1.0.2
+scikit-learn>=1.0.0
 gensim>=4.3.0
 spacy>=3.5.0
 transformers>=4.30.0
 torch>=2.0.0
-sentence-transformers>=2.2.2 
+sentence-transformers>=2.2.2
+faiss-cpu>=1.7.4; platform_system != "Windows"
+faiss-cpu-windows>=1.7.4; platform_system == "Windows"
+tqdm>=4.65.0
+sentencepiece>=0.1.99
+accelerate>=0.20.0
+bitsandbytes>=0.41.0  # For 4-bit quantization of Mistral 
