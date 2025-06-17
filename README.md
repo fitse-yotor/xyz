@@ -45,27 +45,31 @@ This project is a microservices-based system for analyzing Telegram chat data, u
 ## Directory Structure
 
 ```
-.
-├── docker-compose.yml
+project/
 ├── services/
-│   ├── telegram_bot/
-│   │   └── main.py
-│   ├── scraper/
-│   │   └── main.py
-│   ├── preprocessor/
-│   │   └── main.py
-│   ├── embedder/
-│   │   └── main.py
-│   ├── storage/
-│   │   └── main.py
-│   └── common/
-│       └── kafka_utils.py
-├── data/
-│   ├── raw/
-│   ├── preprocessed/
-│   ├── embeddings/
-│   └── storage/
-└── requirements.txt
+│   ├── telegram_bot/          # Telegram Bot Service
+│   │   ├── main.py           # Bot implementation
+│   │   └── Dockerfile        # Bot service container
+│   ├── scraper/              # Scraping Service
+│   │   ├── main.py          # Scraping implementation
+│   │   └── Dockerfile       # Scraper container
+│   ├── preprocessor/         # Preprocessing Service
+│   │   ├── main.py          # Text preprocessing
+│   │   └── Dockerfile       # Preprocessor container
+│   ├── embedder/            # Embedding Service
+│   │   ├── main.py          # Embedding generation
+│   │   └── Dockerfile       # Embedder container
+│   ├── storage/             # Storage Service
+│   │   ├── main.py          # Data storage and retrieval
+│   │   └── Dockerfile       # Storage container
+│   └── common/              # Shared Components
+│       └── kafka_utils.py   # Kafka utilities
+├── data/                    # Data Storage
+│   ├── raw/                # Raw scraped data
+│   ├── preprocessed/       # Cleaned data
+│   ├── embeddings/         # Generated embeddings
+│   └── storage/            # FAISS indices
+└── docker-compose.yml      # Service orchestration
 ```
 
 ## Prerequisites
@@ -480,4 +484,131 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
    # Rebuild and start
    docker-compose up --build
-   ``` 
+   ```
+
+## Project Structure and Components
+
+### Core Processes
+
+1. **Scraping Process**
+   - **Purpose**: Extract messages from Telegram chats
+   - **Components**:
+     - `telegram_bot/main.py`: Handles user interactions
+     - `scraper/main.py`: Implements message scraping
+   - **Libraries Used**:
+     - `python-telegram-bot`: Telegram API integration
+     - `telethon`: Advanced Telegram client
+     - `asyncio`: Asynchronous operations
+   - **Output**: Raw message data in JSON format
+
+2. **Preprocessing Process**
+   - **Purpose**: Clean and prepare text data
+   - **Components**:
+     - `preprocessor/main.py`: Text cleaning and normalization
+   - **Libraries Used**:
+     - `pandas`: Data manipulation
+     - `nltk`: Natural language processing
+     - `emoji`: Emoji handling
+     - `re`: Regular expressions
+   - **Output**: Cleaned and structured text data
+
+3. **Embedding and Storage Process**
+   - **Purpose**: Generate and store embeddings
+   - **Components**:
+     - `embedder/main.py`: Embedding generation
+     - `storage/main.py`: Data storage and retrieval
+   - **Libraries Used**:
+     - `sentence-transformers`: Text embeddings
+     - `faiss`: Vector similarity search
+     - `numpy`: Numerical operations
+     - `torch`: Deep learning operations
+   - **Output**: Vector embeddings and searchable indices
+
+### Key Libraries and Their Roles
+
+1. **Message Processing**
+   - `python-telegram-bot`: Telegram bot framework
+   - `telethon`: Telegram client library
+   - `pandas`: Data manipulation and analysis
+   - `nltk`: Natural language processing
+   - `emoji`: Emoji handling and processing
+
+2. **Machine Learning**
+   - `sentence-transformers`: Text embedding generation
+   - `torch`: Deep learning framework
+   - `numpy`: Numerical computations
+   - `scikit-learn`: Machine learning utilities
+
+3. **Storage and Search**
+   - `faiss`: Efficient similarity search
+   - `pymongo`: MongoDB integration (optional)
+   - `redis`: Caching (optional)
+
+4. **Message Queue**
+   - `confluent-kafka`: Kafka client
+   - `pika`: RabbitMQ client (alternative)
+
+5. **API and Web**
+   - `fastapi`: High-performance API framework
+   - `uvicorn`: ASGI server
+   - `httpx`: Async HTTP client
+
+### Data Flow Description
+
+1. **Input Layer**
+   ```
+   Telegram Chat → Telegram Bot → Scraper Service
+   ```
+   - Receives messages from Telegram
+   - Validates and formats data
+   - Sends to scraping service
+
+2. **Processing Layer**
+   ```
+   Scraper → Preprocessor → Embedder
+   ```
+   - Scrapes message content
+   - Cleans and normalizes text
+   - Generates embeddings
+
+3. **Storage Layer**
+   ```
+   Embedder → Storage → FAISS Index
+   ```
+   - Stores embeddings
+   - Creates searchable indices
+   - Manages data persistence
+
+### Service Descriptions
+
+1. **Telegram Bot Service**
+   - Handles user interactions
+   - Routes messages to appropriate services
+   - Manages bot commands and responses
+   - Implements error handling and retries
+
+2. **Scraper Service**
+   - Connects to Telegram API
+   - Extracts message content
+   - Handles rate limiting
+   - Manages session persistence
+
+3. **Preprocessor Service**
+   - Cleans text data
+   - Removes unwanted content
+   - Normalizes text format
+   - Handles multiple languages
+
+4. **Embedder Service**
+   - Generates text embeddings
+   - Manages model loading
+   - Handles batch processing
+   - Optimizes memory usage
+
+5. **Storage Service**
+   - Manages data persistence
+   - Implements search functionality
+   - Handles data indexing
+   - Manages cache
+
+[Rest of the README remains the same...] 
