@@ -1,0 +1,8 @@
+2025-06-18 12:05:34,230 - __main__ - INFO - Created data directory at: C:\Users\muluh\OneDrive\Desktop\newP\Project\src\scraper\data
+2025-06-18 12:05:34,266 - __main__ - INFO - Database setup completed successfully
+2025-06-18 12:05:34,298 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-06-18 12:05:36,381 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-06-18 12:07:14,532 - __main__ - INFO - Database setup completed successfully
+2025-06-18 12:07:14,536 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-18 12:07:14,663 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-18 12:10:09,989 - __main__ - INFO - Telegram client initialized successfully
