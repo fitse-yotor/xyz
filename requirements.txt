@@ -1,7 +1,5 @@
 pyTelegramBotAPI==4.12.0
 telethon==1.28.5
-tkinter
-asyncio
 pandas==2.1.4
 numpy==1.26.2
 emoji>=2.2.0
@@ -10,20 +8,20 @@ nltk>=3.8.1
 scikit-learn==1.3.2
 gensim>=4.3.0
 spacy>=3.5.0
-transformers==4.36.2
-torch==2.1.2
-sentence-transformers==2.2.2
-faiss-cpu==1.7.4
-faiss-cpu-windows>=1.7.4; platform_system == "Windows"
+transformers>=4.36.0
+torch>=2.1.0
+sentence-transformers>=2.2.0
+faiss-cpu>=1.7.0
+faiss-cpu-windows>=1.7.0; platform_system == "Windows"
 tqdm>=4.65.0
 sentencepiece>=0.1.99
 accelerate>=0.20.0
-bitsandbytes>=0.41.0  # For 4-bit quantization of Mistral 
+bitsandbytes>=0.41.0
 python-telegram-bot==20.7
-seaborn==0.13.0
-matplotlib==3.8.2
-confluent-kafka==2.3.0
-fastapi==0.109.2
-uvicorn==0.27.1
-httpx==0.26.0
-python-dotenv==1.0.1 
+seaborn>=0.13.0
+matplotlib>=3.8.0
+confluent-kafka>=2.3.0
+fastapi>=0.109.0
+uvicorn>=0.27.0
+httpx~=0.25.2
+python-dotenv>=1.0.0 
