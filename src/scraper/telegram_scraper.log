@@ -6,3 +6,111 @@
 2025-06-18 12:07:14,536 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
 2025-06-18 12:07:14,663 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
 2025-06-18 12:10:09,989 - __main__ - INFO - Telegram client initialized successfully
+2025-06-25 11:15:18,621 - __main__ - INFO - Database setup completed successfully
+2025-06-25 11:15:18,632 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-25 11:15:18,745 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-25 11:15:19,565 - __main__ - INFO - Telegram client initialized successfully
+2025-06-25 11:15:44,583 - __main__ - INFO - Database setup completed successfully
+2025-06-25 11:15:44,699 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-25 11:15:44,802 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-25 11:17:54,150 - __main__ - INFO - Database setup completed successfully
+2025-06-25 11:17:54,246 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-06-25 11:17:55,700 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-06-25 11:18:34,479 - telethon.client.users - INFO - Phone migrated to 4
+2025-06-25 11:18:34,590 - telethon.client.telegrambaseclient - INFO - Reconnecting to new data center 4
+2025-06-25 11:18:34,714 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2025-06-25 11:18:34,715 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-06-25 11:18:34,716 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-25 11:18:36,345 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-25 11:19:06,593 - __main__ - INFO - Telegram client initialized successfully
+2025-06-25 11:21:19,777 - __main__ - ERROR - Error scraping source ETHIO CNN: table messages has no column named keywords_matched
+2025-06-25 11:29:24,513 - __main__ - INFO - Database setup completed successfully
+2025-06-25 11:29:24,548 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-25 11:29:24,650 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-25 11:29:25,442 - __main__ - INFO - Telegram client initialized successfully
+2025-06-25 11:31:00,427 - __main__ - ERROR - Error scraping source TIKVAH-ETHIOPIA: table messages has no column named keywords_matched
+2025-06-25 11:37:34,905 - __main__ - INFO - Database setup completed successfully
+2025-06-25 11:37:34,991 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-06-25 11:37:36,937 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-06-25 11:37:53,642 - telethon.client.users - INFO - Phone migrated to 4
+2025-06-25 11:37:53,766 - telethon.client.telegrambaseclient - INFO - Reconnecting to new data center 4
+2025-06-25 11:37:53,914 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2025-06-25 11:37:53,916 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-06-25 11:37:53,917 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-25 11:37:56,140 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-25 11:38:06,557 - __main__ - INFO - Telegram client initialized successfully
+2025-06-25 11:39:14,646 - __main__ - ERROR - Error scraping source ETHIO CNN: table messages has no column named keywords_matched
+2025-06-25 11:40:53,462 - __main__ - ERROR - Error scraping source ETHIO CNN: table messages has no column named keywords_matched
+2025-06-25 11:46:15,704 - __main__ - INFO - Database setup completed successfully
+2025-06-25 11:46:15,739 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-25 11:46:15,841 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-25 11:46:16,415 - __main__ - INFO - Telegram client initialized successfully
+2025-06-25 11:47:11,541 - __main__ - ERROR - Error scraping source SpamBot: table messages has no column named keywords_matched
+2025-06-25 13:18:16,196 - telethon.network.connection.connection - WARNING - Server closed the connection: [WinError 1236] The network connection was aborted by the local system
+2025-06-25 13:18:16,212 - telethon.network.mtprotosender - INFO - Connection closed while receiving data: [WinError 1236] The network connection was aborted by the local system
+2025-06-25 13:18:16,221 - telethon.network.mtprotosender - INFO - Closing current connection to begin reconnect...
+2025-06-25 13:18:16,242 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-25 13:18:16,247 - telethon.network.connection.connection - INFO - <class 'ConnectionAbortedError'> during disconnect: [WinError 1236] The network connection was aborted by the local system
+2025-06-25 13:18:16,351 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-25 13:18:16,882 - telethon.client.updates - INFO - Got difference for channel 1130580549 updates
+2025-06-25 13:27:56,842 - __main__ - ERROR - Error scraping source ETHIO CNN: table messages has no column named keywords_matched
+2025-06-26 12:23:27,933 - __main__ - INFO - Database setup completed successfully
+2025-06-26 12:23:27,973 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-06-26 12:23:29,494 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-06-26 12:23:37,005 - telethon.client.users - INFO - Phone migrated to 4
+2025-06-26 12:23:37,145 - telethon.client.telegrambaseclient - INFO - Reconnecting to new data center 4
+2025-06-26 12:23:37,283 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2025-06-26 12:23:37,283 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-06-26 12:23:37,284 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-26 12:23:38,771 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-26 12:23:47,405 - __main__ - INFO - Telegram client initialized successfully
+2025-06-26 12:29:44,457 - __main__ - INFO - Database setup completed successfully
+2025-06-26 12:29:44,459 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-26 12:29:44,677 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-26 12:29:45,674 - __main__ - INFO - Telegram client initialized successfully
+2025-06-26 12:30:35,295 - __main__ - ERROR - Error scraping source None: table messages has no column named keywords_matched
+2025-06-26 12:34:01,830 - __main__ - INFO - Database setup completed successfully
+2025-06-26 12:34:01,831 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-26 12:34:01,929 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-26 12:34:02,504 - __main__ - INFO - Telegram client initialized successfully
+2025-06-26 12:34:59,035 - __main__ - ERROR - Error scraping source None: NOT NULL constraint failed: messages.source_name
+2025-06-26 12:37:20,550 - __main__ - INFO - Database setup completed successfully
+2025-06-26 12:37:20,552 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-26 12:37:20,744 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-26 12:37:22,384 - __main__ - INFO - Telegram client initialized successfully
+2025-06-26 12:38:12,585 - __main__ - WARNING - Skipping message with missing source_name
+2025-06-26 12:38:12,586 - __main__ - WARNING - Skipping message with missing source_name
+2025-06-26 12:38:12,586 - __main__ - WARNING - Skipping message with missing source_name
+2025-06-26 12:38:12,588 - __main__ - ERROR - Error scraping source None: NOT NULL constraint failed: sources.source_name
+2025-06-26 12:40:07,207 - __main__ - INFO - Database setup completed successfully
+2025-06-26 12:40:07,209 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-26 12:40:07,306 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-26 12:40:07,972 - __main__ - INFO - Telegram client initialized successfully
+2025-06-26 12:41:15,783 - __main__ - WARNING - Skipping message with missing source_name
+2025-06-26 12:41:15,783 - __main__ - WARNING - Skipping message with missing source_name
+2025-06-26 12:41:15,783 - __main__ - WARNING - Skipping message with missing source_name
+2025-06-26 12:41:15,783 - __main__ - WARNING - Skipping sources table update due to missing source_name
+2025-06-26 12:41:15,784 - __main__ - INFO - Successfully scraped 0 messages from None
+2025-06-26 12:43:29,555 - __main__ - INFO - Database setup completed successfully
+2025-06-26 12:43:29,558 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-26 12:43:29,656 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-26 12:43:30,245 - __main__ - INFO - Telegram client initialized successfully
+2025-06-26 12:44:22,421 - __main__ - INFO - Successfully scraped 3 messages from Unknown_902229911
+2025-06-26 12:48:24,650 - __main__ - INFO - Database setup completed successfully
+2025-06-26 12:48:24,653 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-26 12:48:24,750 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-26 12:48:25,327 - __main__ - INFO - Telegram client initialized successfully
+2025-06-26 12:49:22,580 - __main__ - INFO - Successfully scraped 0 messages (filtered from 30 total) from Zehabesha
+2025-06-26 12:50:55,304 - __main__ - INFO - Successfully scraped 0 messages (filtered from 30 total) from Zehabesha
+2025-06-26 12:55:09,538 - telegram_scraper - INFO - Database setup completed successfully
+2025-06-26 12:55:09,539 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-26 12:55:09,642 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-26 12:55:10,406 - telegram_scraper - INFO - Telegram client initialized successfully
+2025-06-26 13:03:11,910 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.92:443/TcpFull...
+2025-06-26 13:03:11,911 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.92:443/TcpFull complete!
+2025-06-26 13:03:32,446 - telegram_scraper - INFO - Database setup completed successfully
+2025-06-26 13:03:32,449 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-06-26 13:03:32,604 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-06-26 13:03:33,238 - telegram_scraper - INFO - Telegram client initialized successfully
+2025-06-26 13:11:33,647 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.92:443/TcpFull...
+2025-06-26 13:11:33,649 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.92:443/TcpFull complete!
